@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+        "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://xmlns.jcp.org/jsf/html"
+      xmlns:ui="http://xmlns.jcp.org/jsf/facelets"
+      xmlns:f="http://xmlns.jcp.org/jsf/core">
+<h:head>
+    <title>Management</title>
+</h:head>
+
+<h:body>
+    <h:form>
+
+        <h:panelGrid columns="7">
+
+            <h:column><h3>Company</h3></h:column>
+            <h:column><h3>Name</h3></h:column>
+            <h:column><h3>Key</h3></h:column>
+            <h:column><h3>Position</h3></h:column>
+            <h:column><h3>Age</h3></h:column>
+            <h:column><h3>Salary</h3></h:column>
+            <h:column></h:column>
+
+            <h:column><h:inputText value="#{managementCDI.company}"/></h:column>
+            <h:column><h:inputText value="#{managementCDI.name}"/></h:column>
+            <h:column><h:inputText value="#{managementCDI.key}"/></h:column>
+            <h:column><h:inputText value="#{managementCDI.position}"/></h:column>
+            <h:column><h:inputText value="#{managementCDI.age}"/></h:column>
+            <h:column><h:inputText value="#{managementCDI.salary}"/></h:column>
+            <h:column><h:commandLink value="Add" action="#{managementCDI.createEmployee}"/></h:column>
+
+            <h:dataTable value="#{managementCDI.all}" var="employee">
+                <h:column><h:outputText value="#{employee.company}"/></h:column>
+            </h:dataTable>
+
+            <h:dataTable value="#{managementCDI.all}" var="employee">
+                <h:column><h:outputText value="#{employee.name}"/></h:column>
+            </h:dataTable>
+
+            <h:dataTable value="#{managementCDI.all}" var="employee">
+                <h:column><h:outputText value="#{employee.key}"/></h:column>
+            </h:dataTable>
+
+            <h:dataTable value="#{managementCDI.all}" var="employee">
+                <h:column><h:outputText value="#{employee.position}"/></h:column>
+            </h:dataTable>
+
+            <h:dataTable value="#{managementCDI.all}" var="employee">
+                <h:column><h:outputText value="#{employee.age}"/></h:column>
+            </h:dataTable>
+
+            <h:dataTable value="#{managementCDI.all}" var="employee">
+                <h:column><h:outputText value="#{employee.salary}"/></h:column>
+            </h:dataTable>
+
+        </h:panelGrid>
+
+    </h:form>
+</h:body>
+
+</html>

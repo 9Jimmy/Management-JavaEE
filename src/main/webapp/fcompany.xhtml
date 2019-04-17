@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+        "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://xmlns.jcp.org/jsf/html"
+      xmlns:ui="http://xmlns.jcp.org/jsf/facelets"
+      xmlns:f="http://xmlns.jcp.org/jsf/core">
+
+<h:head>
+    <title>Filter by company</title>
+</h:head>
+
+<h:body>
+    <h:form>
+
+        Enter company <h:inputText value="#{managementCDI.company}"/>
+
+        <h:panelGrid columns="6">
+
+                <h:dataTable value="#{managementCDI.filterByCompany}" var="employee">
+                    <h:column><h:outputText value="#{employee.company}"/></h:column>
+                </h:dataTable>
+
+                <h:dataTable value="#{managementCDI.filterByCompany}" var="employee">
+                    <h:column><h:outputText value="#{employee.name}"/></h:column>
+                </h:dataTable>
+
+                <h:dataTable value="#{managementCDI.filterByCompany}" var="employee">
+                    <h:column><h:outputText value="#{employee.key}"/></h:column>
+                </h:dataTable>
+
+                <h:dataTable value="#{managementCDI.filterByCompany}" var="employee">
+                    <h:column><h:outputText value="#{employee.position}"/></h:column>
+                </h:dataTable>
+
+                <h:dataTable value="#{managementCDI.filterByCompany}" var="employee">
+                    <h:column><h:outputText value="#{employee.age}"/></h:column>
+                </h:dataTable>
+
+                <h:dataTable value="#{managementCDI.filterByCompany}" var="employee">
+                    <h:column><h:outputText value="#{employee.salary}"/></h:column>
+                </h:dataTable>
+
+        </h:panelGrid>
+
+    </h:form>
+</h:body>
+</html>
