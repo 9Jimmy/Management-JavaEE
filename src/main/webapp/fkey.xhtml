@@ -17,6 +17,13 @@
 
         <h:panelGrid columns="6">
 
+            <h:column><h4>Company</h4></h:column>
+            <h:column><h4>Name</h4></h:column>
+            <h:column><h4>Key</h4></h:column>
+            <h:column><h4>Position</h4></h:column>
+            <h:column><h4>Age</h4></h:column>
+            <h:column><h4>Salary</h4></h:column>
+
             <h:dataTable value="#{managementCDI.findByKey}" var="employee">
                 <h:column><h:outputText value="#{employee.company}"/></h:column>
             </h:dataTable>

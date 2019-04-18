@@ -11,7 +11,6 @@
 
 <h:body>
     <h:form>
-
         <h:panelGrid columns="7">
 
             <h:column><h3>Company</h3></h:column>
@@ -28,7 +27,39 @@
             <h:column><h:inputText value="#{managementCDI.position}"/></h:column>
             <h:column><h:inputText value="#{managementCDI.age}"/></h:column>
             <h:column><h:inputText value="#{managementCDI.salary}"/></h:column>
-            <h:column><h:commandLink value="Add" action="#{managementCDI.createEmployee}"/></h:column>
+            <h:column><h:commandButton value="Add" action="#{managementCDI.createEmployee}"/></h:column>
+
+        </h:panelGrid>
+    </h:form>
+
+    <h:form>
+        <h:panelGrid columns="3">
+
+            <h:column>
+                <h4>Enter key to remove -></h4>
+            </h:column>
+
+            <h:column>
+                <h:inputText value="#{managementCDI.key}"/>
+            </h:column>
+
+            <h:column>
+                <h:commandButton value="Remove" action="#{managementCDI.getRemoved}"/>
+            </h:column>
+
+        </h:panelGrid>
+    </h:form>
+
+    <h:form>
+        <h:panelGrid columns="7">
+
+            <h:column><h4>Company</h4></h:column>
+            <h:column><h4>Name</h4></h:column>
+            <h:column><h4>Key</h4></h:column>
+            <h:column><h4>Position</h4></h:column>
+            <h:column><h4>Age</h4></h:column>
+            <h:column><h4>Salary</h4></h:column>
+            <h:column></h:column>
 
             <h:dataTable value="#{managementCDI.all}" var="employee">
                 <h:column><h:outputText value="#{employee.company}"/></h:column>
@@ -54,8 +85,9 @@
                 <h:column><h:outputText value="#{employee.salary}"/></h:column>
             </h:dataTable>
 
-        </h:panelGrid>
+            <h:column></h:column>
 
+        </h:panelGrid>
     </h:form>
 </h:body>
 

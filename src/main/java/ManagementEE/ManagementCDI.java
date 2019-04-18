@@ -83,4 +83,8 @@ public class ManagementCDI implements Serializable {
     public List<EmpEntity> getFindByKey(){
         return managementEJB.getFindByKey(key);
     }
+
+    public void getRemoved(){
+        managementEJB.getRemoved(key);
+    }
 }

@@ -17,29 +17,36 @@
 
         <h:panelGrid columns="6">
 
-                <h:dataTable value="#{managementCDI.filterByCompany}" var="employee">
-                    <h:column><h:outputText value="#{employee.company}"/></h:column>
-                </h:dataTable>
+            <h:column><h4>Company</h4></h:column>
+            <h:column><h4>Name</h4></h:column>
+            <h:column><h4>Key</h4></h:column>
+            <h:column><h4>Position</h4></h:column>
+            <h:column><h4>Age</h4></h:column>
+            <h:column><h4>Salary</h4></h:column>
 
-                <h:dataTable value="#{managementCDI.filterByCompany}" var="employee">
-                    <h:column><h:outputText value="#{employee.name}"/></h:column>
-                </h:dataTable>
+            <h:dataTable value="#{managementCDI.filterByCompany}" var="employee">
+                <h:column><h:outputText value="#{employee.company}"/></h:column>
+            </h:dataTable>
 
-                <h:dataTable value="#{managementCDI.filterByCompany}" var="employee">
-                    <h:column><h:outputText value="#{employee.key}"/></h:column>
-                </h:dataTable>
+            <h:dataTable value="#{managementCDI.filterByCompany}" var="employee">
+                <h:column><h:outputText value="#{employee.name}"/></h:column>
+            </h:dataTable>
 
-                <h:dataTable value="#{managementCDI.filterByCompany}" var="employee">
-                    <h:column><h:outputText value="#{employee.position}"/></h:column>
-                </h:dataTable>
+            <h:dataTable value="#{managementCDI.filterByCompany}" var="employee">
+                <h:column><h:outputText value="#{employee.key}"/></h:column>
+            </h:dataTable>
 
-                <h:dataTable value="#{managementCDI.filterByCompany}" var="employee">
-                    <h:column><h:outputText value="#{employee.age}"/></h:column>
-                </h:dataTable>
+            <h:dataTable value="#{managementCDI.filterByCompany}" var="employee">
+                <h:column><h:outputText value="#{employee.position}"/></h:column>
+            </h:dataTable>
 
-                <h:dataTable value="#{managementCDI.filterByCompany}" var="employee">
-                    <h:column><h:outputText value="#{employee.salary}"/></h:column>
-                </h:dataTable>
+            <h:dataTable value="#{managementCDI.filterByCompany}" var="employee">
+                <h:column><h:outputText value="#{employee.age}"/></h:column>
+            </h:dataTable>
+
+            <h:dataTable value="#{managementCDI.filterByCompany}" var="employee">
+                <h:column><h:outputText value="#{employee.salary}"/></h:column>
+            </h:dataTable>
 
         </h:panelGrid>
 
